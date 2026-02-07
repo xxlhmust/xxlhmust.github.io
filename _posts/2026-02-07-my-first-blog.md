@@ -7,7 +7,6 @@ tags: [欢迎, 介绍]
 author: xxlh  # 可选，如果不写会使用_config.yml中的social.name
 toc: true  # 是否显示目录，默认为true
 comments: true  # 是否开启评论，默认为true
-image: /assets/img/path-to-image.jpg  # 可选，文章封面图
 ---
 
 # 欢迎来到我的博客！
