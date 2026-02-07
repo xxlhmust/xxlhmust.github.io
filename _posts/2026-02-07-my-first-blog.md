@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "我的第一篇博客"
-date: 2024-01-15 20:00:00 +0800
+date: 2026-02-07 11:00:00 +0800
 categories: [博客, 开始]
 tags: [欢迎, 介绍]
 author: xxlh  # 可选，如果不写会使用_config.yml中的social.name
