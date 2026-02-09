@@ -53,7 +53,7 @@ class Solution:
             mp[key].append(st)
         return list(mp.values())
 </code></pre>
-<h5>3.最长连续序列</h5>
+<h6>3.最长连续序列</h6>
 <pre><code class="language-python">
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
