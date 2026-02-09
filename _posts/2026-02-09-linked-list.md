@@ -30,15 +30,58 @@ pin: false
 3. **内存效率**：只有在需要时才分配内存，减少内存浪费
 4. **灵活操作**：插入和删除操作非常高效，只需修改指针
 
-## 🔗 链表的主要类型
+### 例题
+```html
+<h6>1.相交链表</h6>
+<pre><code class="language-python">
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        qa = headA
+        qb = headB
+        while qa != qb:     
+            qa = qa.next if qa else headB
+            qb = qb.next if qb else headA  #双方分别便利全部的链表，即从a-->b,b-->a
+        return qa
+</code></pre>
+<h6>2.反转链表</h6>
+<pre><code class="language-python">
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        pre = None
+        cur = head
+        while  cur:
+            nxt = cur.nxt  #先保存 在修改指向
+            cur.next = pre
+            pre = cur
+            cur = nxt
+         return pre #（双指针）
+</code></pre>
+<h6>3.回文链表</h6>
+<pre><code class="language-python">
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        empty = []
+        cur = head
+        while cur:
+            empty-list.append(cur.val)
+            cur = cur.next
+        return empty == empty[::-1]  #时间空间复杂度均为O(n)
+<h6>4.环形链表</h6>
+<pre><code class="language-python">
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        if not head:
+            return False   # 避免fast报错，一旦head = None,head.next无意义
+        slow = head
+        fast = head.next
+        while slow != fast:
+            if not fast or  not fast.next :
+                 return False
+            slow = slow.next
+            fast = fast.next.next
+        return True       #快慢指针（双指针）
+        
 
-### 1. 单向链表（Singly Linked List）
-每个节点包含数据和指向下一个节点的指针：
-```python
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 
 
