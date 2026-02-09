@@ -66,6 +66,7 @@ class Solution:
             empty-list.append(cur.val)
             cur = cur.next
         return empty == empty[::-1]  #时间空间复杂度均为O(n)
+</code></pre>
 <h6>4.环形链表</h6>
 <pre><code class="language-python">
 class Solution:
@@ -80,6 +81,7 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         return True       #快慢指针（双指针）
+</code></pre>
         
 
 
